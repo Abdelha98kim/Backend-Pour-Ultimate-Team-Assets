@@ -284,3 +284,7 @@
      <script src="../src/javascript/script.js"></script>
 </body>
 </html>
+
+<?php 
+    
+?>
