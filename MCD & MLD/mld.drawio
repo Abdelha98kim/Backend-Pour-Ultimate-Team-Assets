@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="l6m1K5FrcE34ax4dV8qg" name="Page-1">
+        <mxGraphModel dx="834" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Player(&lt;u&gt;id&lt;/u&gt;, nom, rating, position, #id_club, #id_nationality, #id_gkdetails, #id_playerdetails)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="230" width="500" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Club(&lt;u&gt;id&lt;/u&gt;, nom, logo, date_creation)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="270" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Nationality(&lt;u&gt;id&lt;/u&gt;, nom, continent)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="320" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="gkdatails(&lt;u&gt;id&lt;/u&gt;, rating, diving, handling, kicking, reflexe, speed, positioning)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="370" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="playerdetails(&lt;u&gt;id&lt;/u&gt;, rating, pace, shooting, passing, dribbling, defending, physical)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="410" width="440" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
