@@ -14,26 +14,9 @@
 </head>
 <body>
     <!-- Navbar  -->
-    <nav class="bg-[#38003d] shadow shadow-gray-300 w-100 px-8 md:px-auto">
-	<div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-		<div class="text-indigo-500 md:order-1 flex gap-2">
-			<figure>
-                <img src="../src/assets/img/white-champion-league.png" class="h-10 w-10" alt="champion-league-ball">
-            </figure>
-            <div class="flex items-center">
-                <p class="font-[Outfit] text-white font-medium">YouCode League</p>
-            </div>
-		</div>
-		<div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
-			<ul class="flex font-[Outfit] font-semibold justify-between">
-				<li class="md:px-4 md:py-2 text-white"><a href="../index.html">Home</a></li>
-				<li class="md:px-4 md:py-2 text-white"><a href="#">Shop</a></li>
-				<li class="md:px-4 md:py-2 text-white"><a href="#">About</a></li>
-				<li class="md:px-4 md:py-2 text-white"><a href="#">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-    </nav>
+     <?php
+     include ("navbar.php");
+     ?>
 
     <!-- Main -->
      <main class="bg-[#FFF6E9] font-[Outfit] h-auto w-full flex" id="main">
@@ -180,7 +163,7 @@
                         </button>
                     </div>
                     <div>
-                        <form class="p-4">
+                        <form class="p-4" method="post">
                             <div>
                                 <div class="pb-5">
                                     <label for="player-picture" class="block mb-2 text-sm font-medium text-gray-900">Player Picture</label>
@@ -250,6 +233,9 @@
                                 </button>
                             </div>
                         </form>
+                        <?php
+                          include("connection.php");
+                        ?>
                     </div>
                 </div>
             </div>
@@ -259,26 +245,9 @@
      </main>
 
      <!-- Footer -->
-    <footer class="bg-[#38003d] shadow mt-4 dark:bg-gray-800 ">
-        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span class="text-sm text-white sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">YouCode League</a>. All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white dark:text-gray-400 sm:mt-0">
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">About</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Contact</a>
-            </li>
-        </ul>
-        </div>
-    </footer>
+     <?php
+     include ("footer.php");
+     ?>
 
 
      <script src="../src/javascript/script.js"></script>
