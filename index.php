@@ -43,7 +43,7 @@
             <div class="h-screen flex flex-col justify-center">
                 <p class="text-7xl text-center mx-10">Choose your team and participate in the challenges</p>
                 <div class="flex justify-center">
-                    <a href="Html/fantasy.php">
+                    <a href="php/fantasy.php">
                         <button class="bg-[#FFF8B8] rounded-lg py-1 px-3 mt-10 ">Create your Fantasy team</button>
                     </a>
                 </div>
