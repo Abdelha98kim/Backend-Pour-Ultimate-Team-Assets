@@ -163,7 +163,7 @@
                         </button>
                     </div>
                     <div>
-                        <form class="p-4" method="post">
+                        <form class="p-4" method="get">
                             <div>
                                 <div class="pb-5">
                                     <label for="player-picture" class="block mb-2 text-sm font-medium text-gray-900">Player Picture</label>
@@ -175,8 +175,12 @@
                                 </div>
                             </div>
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
                                 <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Type Player Full Name">
+                            </div>
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Prename</label>
+                                <input type="text" name="prename" id="prename" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Type Player Full Name">
                             </div>
                             <div>
                                 <label for="rating" class="block mb-2 text-sm font-medium text-gray-900">Rating</label>
@@ -224,22 +228,42 @@
                                 </div>
                             </div>
                             <div class="flex w-full justify-center pt-4 gap-2">
-                                <button id="playerAdding" type="button"class="text-white inline-flex items-center bg-[#38003d] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <input type="submit" name="submit" value="+add player" class="text-white inline-flex items-center bg-[#38003d] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <!-- <button id="playerAdding" type="button"class="text-white inline-flex items-center bg-[#38003d] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
                                     Add Player
-                                </button>
+                                </button> -->
                                 <button id="playerAdding" type="reset"class="text-white inline-flex items-center bg-[#38003d] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     reset
                                 </button>
                             </div>
                         </form>
-                        <?php
-                          include("connection.php");
-                        ?>
+                       
                     </div>
                 </div>
             </div>
+            
         </section>
+        <?php
+              include("./connection.php");
+
+            
+              
+              if(isset($_GET["submit"])){
+                $identifier = mysqli_num_rows(mysqli_query($link, "SELECT id FROM Player")) + 1;
+                $name = $_GET["name"];
+                $prename = $_GET["prename"];
+                $rating = $_GET["rating"];
+                $sql = "INSERT INTO player(id, nom, prenom, rating) VALUES ($identifier, '$name', '$prename', $rating)";
+
+                mysqli_query($link, $sql);
+
+                $name = " ";
+                $prename = " ";
+                $rating = " ";
+
+            }
+        ?>
 
         
      </main>
@@ -253,7 +277,3 @@
      <script src="../src/javascript/script.js"></script>
 </body>
 </html>
-
-<?php 
-    
-?>
