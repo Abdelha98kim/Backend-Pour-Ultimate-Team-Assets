@@ -258,10 +258,6 @@
 
                 mysqli_query($link, $sql);
 
-                $name = " ";
-                $prename = " ";
-                $rating = " ";
-
             }
         ?>
 
